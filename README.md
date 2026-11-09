@@ -36,4 +36,4 @@ docs/
 
 **Comece em [supabase/README.md](supabase/README.md)** para conferir o status da implantação e preparar os testes de autenticação. O [modelo de dados](docs/modelo-dados.md) explica os relacionamentos; o [guia de integração](docs/integracao-lovable-n8n.md) orienta a futura conexão com Lovable e n8n.
 
-> Importante: o commit contém **estrutura e migrations**, não dados de produção. Para usar com famílias reais, é preciso configurar o projeto Supabase, validar a segurança do formulário público e as regras de privacidade/LGPD.
+> Importante: o commit contém **estrutura e migrations**, não dados de produção. O Supabase já recebeu as migrations; antes de usar dados de famílias reais, é preciso criar e testar as contas da equipe, validar o formulário público e definir as regras de privacidade/LGPD.
