@@ -10,13 +10,21 @@ Este diretório contém a parte inicial do **CRM escolar**, independente do fron
 - \`seed.sql\`: séries escolares ilustrativas, sem dados pessoais.
 - \`tests/smoke.sql\`: verificação básica da estrutura e RLS.
 
-## Aplicação em um projeto Supabase
+## Implantação verificada — 09/11/2026
 
-1. Crie/identifique o **projeto Supabase destinado a este CRM** e faça backup antes de aplicar em uma base que já contenha tabelas.
-2. No **SQL Editor**, execute os três arquivos de \`migrations/\` **uma única vez**, em ordem crescente, ou use o fluxo oficial do Supabase CLI (\`supabase db push\`) após vincular o projeto.
-3. Execute \`seed.sql\` se desejar carregar a nomenclatura inicial das séries.
-4. Execute \`tests/smoke.sql\` e confira a mensagem de sucesso.
-5. Em **Authentication > Users**, crie os usuários reais da equipe (1 gestor, 3 atendentes).
+- Projeto de destino: **Banco de dados - EnsinaA.Í** (`ezghervwmtqcsngwkjvv`), na conexão Supabase **ENSINA-AÍ**.
+- As 3 migrations listadas acima **já foram aplicadas com sucesso** no banco remoto. Não executá-las novamente nesse projeto.
+- Validação estrutural: **10 tabelas** em `public`, todas com RLS, **25 políticas**, view `v_dashboard_atendimentos` e RPC `redistribuir_atendimento` presentes. A auditoria de segurança retornou **0 alertas**.
+- As tabelas estavam vazias no momento da verificação. **Não foram realizados testes de autorização com usuários reais**, distribuição de leads ou fluxo Lovable/n8n.
+- O advisor de desempenho apontou **8 FKs sem índice dedicado**; os alertas de índices não utilizados são esperados com banco vazio.
+
+### Atenção ao histórico de migrations
+
+A integração aplicou as migrations sob as versões **20261109223131**, **20261109223133** e **20261109223135** no histórico remoto, enquanto os arquivos usam os prefixos **20261109214500**, **20261109214600** e **20261109214700**. **Não execute `supabase db push` automaticamente** antes de reconciliar cuidadosamente o histórico local e remoto (`supabase migration list` / fluxo oficial de `migration repair`), pois o CLI pode interpretar esses arquivos como pendentes. Preserve os arquivos SQL já versionados.
+
+## Próximos passos
+
+1. Em **Authentication > Users**, crie os usuários da equipe (1 gestor e 3 atendentes) em ambiente de teste.
 6. Depois de criados os usuários, cadastre os perfis via SQL Editor, substituindo os UUIDs reais:
 
 \`\`\`sql
@@ -28,10 +36,10 @@ values
   ('UUID_ATENDENTE_3', 'Atendente 3', 'atendente', true);
 \`\`\`
 
-7. Confirme os turnos e os dados da escola antes de cadastrá-los. Configure login no Lovable e conecte o projeto via URL + chave **publishable**.
-8. Faça os cenários de teste do arquivo \`tests/smoke.sql\` com perfis de teste, antes de cadastrar dados reais.
-
-**Atenção:** Esses arquivos estão versionados no GitHub; **isso não significa que as migrations já foram executadas no projeto Supabase**. Não aplique migrations em um projeto existente sem verificar se há conflitos de nomes.
+3. Execute `seed.sql` apenas se desejar carregar séries ilustrativas; não foram inseridas séries nessa implantação.
+4. Confirme turnos e informações reais da escola antes de preenchê-los. Configure login no Lovable e conecte o projeto usando a URL e a chave **publishable**.
+5. Rode `tests/smoke.sql` e execute **testes funcionais** com sessões separadas de gestor e atendentes, verificando visibilidade da carteira, criação de leads, fila, transferência e histórico.
+6. Antes de usar dados de famílias reais, valide o fluxo público em backend/Edge Function, controles de abuso e adequação à LGPD.
 
 ## Regras de negócio
 
