@@ -25,7 +25,7 @@ A integração aplicou as migrations sob as versões **20261109223131**, **20261
 ## Próximos passos
 
 1. Em **Authentication > Users**, crie os usuários da equipe (1 gestor e 3 atendentes) em ambiente de teste.
-6. Depois de criados os usuários, cadastre os perfis via SQL Editor, substituindo os UUIDs reais:
+2. Depois de criados os usuários, cadastre os perfis via SQL Editor, substituindo os UUIDs reais:
 
 \`\`\`sql
 insert into public.perfis (id, nome, papel, disponivel)
