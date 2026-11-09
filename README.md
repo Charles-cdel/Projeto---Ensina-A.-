@@ -4,7 +4,7 @@ Projeto final da formação em **IA Generativa**. Solução de atendimento e aco
 
 ## Status
 
-**Etapa 1 — estrutura inicial do banco de dados versionada.** O frontend, as automações e a implantação do banco serão integrados nas próximas etapas.
+**Etapa 1 — banco de dados implantado no Supabase em 09/11/2026.** As 3 migrations foram aplicadas ao projeto `Banco de dados - EnsinaA.Í` (`ezghervwmtqcsngwkjvv`) e a estrutura foi verificada: 10 tabelas com RLS habilitada, 25 políticas, função de redistribuição e view de indicadores. Nenhum alerta no advisor de segurança. Ainda faltam criar usuários da equipe, testar os fluxos com sessões reais e conectar a aplicação Lovable e as automações n8n.
 
 ## Pastas
 
@@ -34,6 +34,6 @@ docs/
 - Gestor com permissão de redistribuição e auditoria;
 - Políticas de acesso **RLS** para proteger dados pessoais.
 
-**Comece em [supabase/README.md](supabase/README.md)** para instalar e testar. O [modelo de dados](docs/modelo-dados.md) explica os relacionamentos; o [guia de integração](docs/integracao-lovable-n8n.md) orienta a futura conexão com Lovable e n8n.
+**Comece em [supabase/README.md](supabase/README.md)** para conferir o status da implantação e preparar os testes de autenticação. O [modelo de dados](docs/modelo-dados.md) explica os relacionamentos; o [guia de integração](docs/integracao-lovable-n8n.md) orienta a futura conexão com Lovable e n8n.
 
 > Importante: o commit contém **estrutura e migrations**, não dados de produção. Para usar com famílias reais, é preciso configurar o projeto Supabase, validar a segurança do formulário público e as regras de privacidade/LGPD.
