@@ -11,9 +11,9 @@ Projeto final da formação em **IA Generativa**. Solução de atendimento e aco
 \`\`\`text
 supabase/
 ├── migrations/
-│   ├── 20261109214500_estrutura_inicial.sql
-│   ├── 20261109214600_politicas_rls.sql
-│   └── 20261109214700_distribuicao_automatica.sql
+│   ├── 20261109223131_20261109214500_estrutura_inicial.sql
+│   ├── 20261109223133_20261109214600_politicas_rls.sql
+│   └── 20261109223135_20261109214700_distribuicao_automatica.sql
 ├── seed.sql
 ├── tests/
 │   └── smoke.sql

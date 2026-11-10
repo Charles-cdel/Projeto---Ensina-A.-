@@ -4,9 +4,9 @@ Este diretório contém a parte inicial do **CRM escolar**, independente do fron
 
 ## Estrutura
 
-- \`migrations/20261109214500_estrutura_inicial.sql\`: 10 tabelas, FKs, validações, índices, RLS ativada e permissões iniciais.
-- \`migrations/20261109214600_politicas_rls.sql\`: políticas de acesso de gestor e atendente e view de indicadores.
-- \`migrations/20261109214700_distribuicao_automatica.sql\`: triggers da fila, auditoria e RPC de redistribuição.
+- \`migrations/20261109223131_20261109214500_estrutura_inicial.sql\`: 10 tabelas, FKs, validações, índices, RLS ativada e permissões iniciais.
+- \`migrations/20261109223133_20261109214600_politicas_rls.sql\`: políticas de acesso de gestor e atendente e view de indicadores.
+- \`migrations/20261109223135_20261109214700_distribuicao_automatica.sql\`: triggers da fila, auditoria e RPC de redistribuição.
 - \`seed.sql\`: séries escolares ilustrativas, sem dados pessoais.
 - \`tests/smoke.sql\`: verificação básica da estrutura e RLS.
 
@@ -20,7 +20,7 @@ Este diretório contém a parte inicial do **CRM escolar**, independente do fron
 
 ### Atenção ao histórico de migrations
 
-A integração aplicou as migrations sob as versões **20261109223131**, **20261109223133** e **20261109223135** no histórico remoto, enquanto os arquivos usam os prefixos **20261109214500**, **20261109214600** e **20261109214700**. **Não execute `supabase db push` automaticamente** antes de reconciliar cuidadosamente o histórico local e remoto (`supabase migration list` / fluxo oficial de `migration repair`), pois o CLI pode interpretar esses arquivos como pendentes. Preserve os arquivos SQL já versionados.
+**Correção do check Supabase Preview:** os três arquivos foram renomeados para iniciar pelas versões remotas **20261109223131**, **20261109223133** e **20261109223135**. O sufixo preserva o nome original da migration e o conteúdo SQL permanece idêntico. O histórico do banco remoto não foi alterado; não execute os scripts novamente. O merge desta correção deve permitir ao integrador GitHub/Supabase reconhecer o histórico já aplicado. Confirme em `supabase migration list` antes de qualquer `supabase db push`.
 
 ## Próximos passos
 
