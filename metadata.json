@@ -1,0 +1,6 @@
+{
+  "name": "ENSINA AÍ - Escola",
+  "description": "Landing Page institucional da escola ENSINA AÍ, atendendo desde a Educação Infantil até o Ensino Médio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF" />
+      <stop offset="100%" stop-color="#FEF3C7" />
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0F172A" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Background decorative shapes -->
+  <circle cx="480" cy="90" r="70" fill="#FEF08A" opacity="0.6" />
+  <circle cx="80" cy="380" r="50" fill="#BFDBFE" opacity="0.5" />
+  <path d="M520 280C550 310 540 370 500 400C460 430 400 420 380 380C360 340 390 280 430 260C470 240 490 250 520 280Z" fill="#FDE68A" opacity="0.4" />
+
+  <!-- Main Card Graphic (Visualizing Complete Journey 1 ano ao 3º ano do Ensino Médio) -->
+  <g filter="url(#softShadow)">
+    <rect x="50" y="40" width="500" height="420" rx="24" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" />
+
+    <!-- Top decorative bar inside card -->
+    <rect x="50" y="40" width="500" height="8" rx="4" fill="url(#primaryGrad)" />
+
+    <!-- Header inside hero visual -->
+    <text x="80" y="85" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="14" fill="#2563EB" letter-spacing="1">
+      JORNADA PEDAGÓGICA ENSINA AÍ
+    </text>
+    <text x="80" y="112" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="20" fill="#0F172A">
+      Do 1º ano de vida ao 3º ano do Ensino Médio
+    </text>
+
+    <!-- Stage 1: Berçário & Ed. Infantil (1 a 5 anos) -->
+    <g transform="translate(80, 140)">
+      <rect width="440" height="64" rx="12" fill="#F8FAFC" stroke="#E2E8F0" />
+      <circle cx="36" cy="32" r="18" fill="#FEF3C7" />
+      <!-- Baby / Toy icon -->
+      <path d="M36 24C32 24 29 27 29 31C29 34 31 36 33 37C33 39 35 40 36 40C37 40 39 39 39 37C41 36 43 34 43 31C43 27 40 24 36 24Z" fill="#F59E0B" />
+      <text x="70" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="14" fill="#0F172A">
+        Educação Infantil (a partir de 1 ano)
+      </text>
+      <text x="70" y="45" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#64748B">
+        Acolhimento, estímulo sensorial, afetividade e primeiros passos no convívio social
+      </text>
+      <rect x="360" y="22" width="65" height="22" rx="11" fill="#FEF3C7" />
+      <text x="392" y="37" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="10.5" fill="#B45309" text-anchor="middle">
+        1 a 5 anos
+      </text>
+    </g>
+
+    <!-- Stage 2: Ensino Fundamental I e II (6 a 14 anos) -->
+    <g transform="translate(80, 218)">
+      <rect width="440" height="64" rx="12" fill="#F8FAFC" stroke="#E2E8F0" />
+      <circle cx="36" cy="32" r="18" fill="#DBEAFE" />
+      <!-- Book icon -->
+      <path d="M28 26C31 25 34 25 36 27C38 25 41 25 44 26V37C41 36 38 36 36 38C34 36 31 36 28 37V26Z" fill="#2563EB" />
+      <text x="70" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="14" fill="#0F172A">
+        Ensino Fundamental I &amp; II
+      </text>
+      <text x="70" y="45" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#64748B">
+        Alfabetização sólida, pensamento crítico, método científico e formação cidadã
+      </text>
+      <rect x="355" y="22" width="70" height="22" rx="11" fill="#DBEAFE" />
+      <text x="390" y="37" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="10.5" fill="#1D4ED8" text-anchor="middle">
+        1º ao 9º ano
+      </text>
+    </g>
+
+    <!-- Stage 3: Ensino Médio (15 a 17 anos) -->
+    <g transform="translate(80, 296)">
+      <rect width="440" height="64" rx="12" fill="#F8FAFC" stroke="#E2E8F0" />
+      <circle cx="36" cy="32" r="18" fill="#D1FAE5" />
+      <!-- Cap icon -->
+      <path d="M44 30L36 26L28 30L36 34L44 30Z" fill="#059669" />
+      <path d="M31 32V35C31 36.5 33.2 38 36 38C38.8 38 41 36.5 41 35V32" stroke="#059669" stroke-width="1.5" stroke-linecap="round" />
+      <text x="70" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="14" fill="#0F172A">
+        Ensino Médio Preparatório
+      </text>
+      <text x="70" y="45" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#64748B">
+        Foco nos vestibulares, ENEM, projeto de vida e protagonismo juvenil
+      </text>
+      <rect x="355" y="22" width="70" height="22" rx="11" fill="#D1FAE5" />
+      <text x="390" y="37" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="10.5" fill="#047857" text-anchor="middle">
+        1º ao 3º ano
+      </text>
+    </g>
+
+    <!-- Floating badge bottom -->
+    <g transform="translate(100, 380)">
+      <rect width="400" height="48" rx="10" fill="#1E3A8A" />
+      <circle cx="30" cy="24" r="10" fill="#F59E0B" />
+      <path d="M26 24L29 27L34 21" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="50" y="28" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="13" fill="#FFFFFF">
+        Estrutura completa, segura e acolhedora em tempo integral e regular
+      </text>
+    </g>
+  </g>
+</svg>

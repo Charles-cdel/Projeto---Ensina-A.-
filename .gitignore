@@ -1,16 +1,8 @@
-# Credenciais e variáveis locais
-.env
-.env.*
-!.env.example
-*.local
-*.pem
-*.key
-# Build e dependências
 node_modules/
-dist/
 build/
+dist/
 coverage/
-# IDE e sistema
 .DS_Store
-Thumbs.db
-.vscode/
+*.log
+.env*
+!.env.example

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" width="280" height="64" fill="none" aria-label="ENSINA AÍ - Escola de Educação Básica">
+  <!-- Symbol Icon: Book & Growth Leaf / Sun -->
+  <g transform="translate(4, 6)">
+    <!-- Shield / Badge backdrop subtle glow -->
+    <rect x="0" y="0" width="52" height="52" rx="14" fill="#1E3A8A" />
+    <!-- Gradient accent circle inside -->
+    <circle cx="26" cy="18" r="7" fill="#F59E0B" />
+    <!-- Stylized open book / wings -->
+    <path d="M12 36C17 32 23 31 26 34C29 31 35 32 40 36V26C35 23 29 23 26 25C23 23 17 23 12 26V36Z" fill="#FFFFFF" />
+    <path d="M26 25V39" stroke="#1E3A8A" stroke-width="2.5" stroke-linecap="round" />
+    <!-- Sprout / Star of knowledge -->
+    <path d="M26 12L27.5 15.5L31 16L28.5 18.5L29 22L26 20L23 22L23.5 18.5L21 16L24.5 15.5L26 12Z" fill="#FBBF24" />
+    <!-- Playful warm dot -->
+    <circle cx="42" cy="10" r="4" fill="#10B981" />
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(68, 14)">
+    <!-- ENSINA -->
+    <text x="0" y="24" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="24" fill="#0F172A" letter-spacing="-0.5">
+      ENSINA <tspan fill="#F59E0B">AÍ</tspan>
+    </text>
+    <!-- Subtitle -->
+    <text x="1" y="38" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="9.5" fill="#64748B" letter-spacing="1.8">
+      EDUCAÇÃO BÁSICA COMPLETA
+    </text>
+  </g>
+</svg>

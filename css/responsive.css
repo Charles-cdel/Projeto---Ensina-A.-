@@ -1,0 +1,420 @@
+/* ==========================================================================
+   ENSINA AÍ - INSTITUIÇÃO DE ENSINO
+   Folha de Estilos Responsiva (responsive.css)
+   Media Queries & Adaptação para Telas e Dispositivos
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Telas Médias / Tablets e Telas Pequenas de Desktop (max-width: 1024px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1024px) {
+  :root {
+    --header-height: 72px;
+    --space-3xl: 3.5rem;
+    --space-4xl: 4.5rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    text-align: left;
+  }
+
+  .hero-visual {
+    order: 2;
+    width: 100%;
+  }
+
+  .hero-media-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Previne overflow horizontal de badges flutuantes em tablets */
+  .hero-floating-badge.badge-top {
+    top: 12px;
+    right: 12px;
+  }
+
+  .hero-floating-badge.badge-bottom {
+    bottom: 12px;
+    left: 12px;
+  }
+
+  /* Apresentação Institucional em Tablet */
+  .institutional-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .institutional-visual {
+    order: 2;
+    width: 100%;
+  }
+
+  .institutional-card {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Jornada de Aprendizagem em Tablet */
+  .journey-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  /* O terceiro card de segmento ocupa 2 colunas para manter harmonia */
+  .journey-card:nth-child(3):last-child {
+    grid-column: span 2;
+    max-width: 580px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Diferenciais em Tablet */
+  .differentials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  /* Infraestrutura em Tablet */
+  .infra-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. Tablets e Telas Mobile Horizontais (max-width: 768px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  :root {
+    --header-height: 68px;
+    --font-size-5xl: 2.25rem;
+    --font-size-4xl: 2rem;
+    --font-size-3xl: 1.625rem;
+    --font-size-2xl: 1.375rem;
+    --space-2xl: 2rem;
+    --space-3xl: 2.75rem;
+  }
+
+  /* Ocultar barra superior em telas menores para otimizar espaço */
+  .top-bar {
+    display: none;
+  }
+
+  /* Botão Menu Hambúrguer Visível com Touch Target mínimo de 44px */
+  .mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Menu de Navegação em Gaveta Mobile */
+  .nav-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 100vw;
+    height: calc(100vh - var(--header-height));
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: var(--space-xl) var(--space-lg);
+    gap: var(--space-md);
+    transform: translateX(100%);
+    transition: transform var(--transition-slow);
+    box-shadow: var(--shadow-xl);
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  /* Estado Aberto do Menu Mobile */
+  .nav-menu.is-open {
+    transform: translateX(0);
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0;
+  }
+
+  .nav-item {
+    width: 100%;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-md) 0;
+    min-height: 48px;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary-dark);
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .nav-actions .btn-header-cta {
+    display: none;
+  }
+
+  .nav-menu-cta {
+    display: block;
+    margin-top: var(--space-md);
+    width: 100%;
+  }
+
+  .nav-menu-cta .btn {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .hero-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-lg);
+  }
+
+  .hero-main-photo {
+    height: 300px;
+  }
+
+  .hero-floating-badge {
+    padding: 0.5rem 0.85rem;
+    gap: var(--space-xs);
+  }
+
+  .hero-floating-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero-floating-badge.badge-top {
+    top: 10px;
+    right: 10px;
+  }
+
+  .hero-floating-badge.badge-bottom {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .institutional-image {
+    height: 300px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: var(--space-sm);
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .hero-highlights {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  /* Grades Adaptadas para Coluna Única */
+  .journey-grid,
+  .differentials-grid,
+  .infra-gallery-grid,
+  .grid-3,
+  .grid-4,
+  .grid-2,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .journey-card:nth-child(3):last-child {
+    grid-column: auto;
+    max-width: 100%;
+  }
+
+  /* FAQ Accordion em Mobile */
+  .faq-trigger {
+    padding: 1rem 1.25rem;
+    font-size: var(--font-size-sm);
+  }
+
+  .faq-answer-inner {
+    padding: 0 1.25rem 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  .gallery-modal-dialog {
+    width: 95%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: var(--space-sm);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. Telas Pequenas / Mobile Vertical (max-width: 480px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .site-logo-img {
+    height: 38px;
+  }
+
+  .hero-badge {
+    font-size: 0.72rem;
+    padding: 0.35rem 0.75rem;
+  }
+
+  .hero-title {
+    font-size: 1.625rem;
+    line-height: 1.22;
+  }
+
+  .hero-subtitle {
+    font-size: 0.925rem;
+    line-height: 1.6;
+  }
+
+  .hero-main-photo {
+    height: 240px;
+  }
+
+  .hero-floating-badge {
+    max-width: calc(100% - 20px);
+    padding: 0.4rem 0.65rem;
+    font-size: 0.72rem;
+  }
+
+  .hero-floating-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .hero-floating-badge strong {
+    font-size: 0.75rem;
+  }
+
+  .hero-floating-badge span {
+    font-size: 0.68rem;
+  }
+
+  .section {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  .section-description {
+    font-size: 0.875rem;
+  }
+
+  .journey-card-body,
+  .differential-card,
+  .infra-body {
+    padding: var(--space-lg);
+  }
+
+  .contact-info-panel,
+  .contact-form-shell {
+    padding: var(--space-lg) 1rem;
+  }
+
+  .btn-whatsapp-direct {
+    padding: 0.85rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .footer-social-list {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. Telas Ultra-Estreitas (max-width: 360px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 360px) {
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .hero-title {
+    font-size: 1.45rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+  }
+}
