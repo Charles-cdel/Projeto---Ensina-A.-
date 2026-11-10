@@ -16,11 +16,11 @@ As três migrations existentes foram aplicadas ao projeto remoto, em sequência,
 
 | Arquivo do repositório | Versão registrada no banco |
 | --- | --- |
-| `20261109214500_estrutura_inicial.sql` | `20261109223131` |
-| `20261109214600_politicas_rls.sql` | `20261109223133` |
-| `20261109214700_distribuicao_automatica.sql` | `20261109223135` |
+| `20261109223131_20261109214500_estrutura_inicial.sql` | `20261109223131` |
+| `20261109223133_20261109214600_politicas_rls.sql` | `20261109223133` |
+| `20261109223135_20261109214700_distribuicao_automatica.sql` | `20261109223135` |
 
-**Atenção:** os prefixos dos nomes de arquivos e as versões gravadas no histórico remoto diferem. Antes de usar `supabase db push`, comparar os históricos e reconciliá-los com os comandos oficiais do Supabase CLI. **Não reaplicar as três migrations sobre esse projeto**, pois o esquema já existe.
+**Correção preparada em GitHub:** os arquivos receberam prefixos iguais às versões registradas remotamente; os nomes originais foram preservados após o segundo `_`. O SQL é o mesmo, nenhuma migration foi reaplicada e o banco remoto não foi modificado. Confirme o status do check **Supabase Preview** após mesclar o PR de correção. Não execute `supabase db push` sem revisar `supabase migration list`.
 
 ## 3. Estrutura implantada
 
@@ -69,7 +69,7 @@ O advisor de performance encontrou **8 chaves estrangeiras sem índices dedicado
 - [ ] Executar `supabase/tests/smoke.sql` e registrar o resultado.
 - [ ] Testar com usuários autenticados: isolamento da carteira por RLS, gestão e impedimento de acesso anônimo.
 - [ ] Testar lead novo, distribuição por menor carga, ausência de atendente disponível e redistribuição pelo gestor.
-- [ ] Reconciliar versões de migrations locais/remotas antes de executar comandos de push.
+- [x] Alinhar prefixos dos arquivos às versões do histórico remoto; validar resultado do check Supabase Preview após o merge.
 - [ ] Confirmar catálogo de séries, turnos e dados da escola antes de carregar `seed.sql`.
 - [ ] Integrar a aplicação Lovable usando somente a chave publicável e autenticação apropriada.
 - [ ] Integrar n8n/webhooks por backend ou Edge Function segura (sem chave secreta no frontend).
